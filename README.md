@@ -9,15 +9,15 @@
   <li> MySql with sequelize library
   <li> Node.JS
   <li> Express 
- <ul>
- 
+ </ul>
+  
 ## How to install:
   
-<ul>
+ <ul>
   <li> docker-compose build
   <li> docker-compose up -d
   <li> docker exec -it school bash
   <li> npx sequelize-cli db:migrate
   <li> npx sequelize-cli db:seed:all
-<ul>
+ </ul>
 
