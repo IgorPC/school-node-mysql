@@ -1,7 +1,7 @@
 # school-node-mysql
  A simple API made with node.js and sequelize
  
-## Project made based on the course <a href="https://cursos.alura.com.br/course/nodejs-api-rest-express-mongodb">Node.js: API Rest com Express e MongoDB</a> 
+## Project made based on the course <a href="https://cursos.alura.com.br/course/orm-nodejs-api-sequelize-mysql">ORM AND NodeJS: API with Sequelize and MySQL</a> 
  
 ## Technologies:
  
