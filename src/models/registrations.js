@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   Registrations.init({
   }, {
     sequelize,
+    paranoid: true,
     modelName: 'Registrations',
   });
   
