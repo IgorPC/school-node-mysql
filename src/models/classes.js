@@ -23,8 +23,24 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Classes.init({
-    name: DataTypes.STRING,
-    date_start: DataTypes.DATEONLY
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [5, 50],
+          msg: "The name field must have more than 5 and less than 50 characteres"
+        }
+      }
+    },
+    date_start: {
+      type: DataTypes.DATEONLY,
+      validate: {
+        isDate: {
+          args: true,
+          msg: "date_start field only accept dates"
+        }
+      }
+    }
   }, {
     sequelize,
     paranoid: true,

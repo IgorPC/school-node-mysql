@@ -17,7 +17,15 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Levels.init({
-    description: DataTypes.STRING
+    description: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [5, 50],
+          msg: "The description field must have more than 5 and less than 50 characteres"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Levels',

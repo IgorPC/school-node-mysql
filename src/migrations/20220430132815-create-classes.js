@@ -23,14 +23,15 @@ module.exports = {
         references: { model: 'Levels', key: 'id'}
       },
       date_start: {
+        allowNull: false,
         type: Sequelize.DATEONLY
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });

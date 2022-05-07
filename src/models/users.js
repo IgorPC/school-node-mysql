@@ -23,9 +23,25 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Users.init({
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [5, 50],
+          msg: "The name field must have more than 5 and less than 50 characteres"
+        }
+      }
+    },
     active: DataTypes.BOOLEAN,
-    email: DataTypes.STRING
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: {
+          args: true,
+          msg: "The Email Field is not a valid Email"
+        }
+      }
+    }
   }, {
     sequelize,
     paranoid: true,

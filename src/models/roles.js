@@ -16,7 +16,15 @@ module.exports = (sequelize, DataTypes) => {
   }
 
   Roles.init({
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [5, 50],
+          msg: "The name field must have more than 5 and less than 50 characteres"
+        }
+      }
+    },
     active: DataTypes.BOOLEAN
   }, {
     sequelize,
